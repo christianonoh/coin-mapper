@@ -1,12 +1,20 @@
+<%
+=begin%>
+ <%= stylesheet_link_tag "category_index" %> 
+<%
+=end%>
+<section class='categories-section'>
 <h1>Categories</h1>
 
 <div id="categories">
   <% @categories.each do |category| %>
-    <%= render category %>
-    <p>
-      <%= link_to "Show this category", category %>
-    </p>
+    <%= link_to category do %>
+      <%= render category %>
+    <% end %>
   <% end %>
 </div>
 
-<%= link_to "New category", new_category_path %>
+<div class="btn-container">
+  <%= link_to "New category", new_category_path, class: 'btn btn-block' %>
+</div>
+</section>

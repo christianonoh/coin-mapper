@@ -1,9 +1,20 @@
+<%= stylesheet_link_tag "category_show" %>
 <%= render @category %>
+<span class="category-btns">
+<a href="<%= edit_category_path(@category) %>">
+  <i class="fa-solid fa-pen-to-square" style="color: #3778c2;"></i>
+</a>
 
-<div>
-  <%= link_to "Edit this category", edit_category_path(@category) %> |
+  <%= button_to @category, method: :delete, data: { turbo_confirm: "Delete #{@category.name} category?" } do %>
+    <i class="fa-solid fa-trash" style="color: #ec2727;"></i>
+  <% end %>
+</span>
+<% @expenses.each do |expense| %>
+  <%= render expense %>
+<% end %>
   <%= link_to "Back to categories", categories_path %>
 
-  <%= button_to "Destroy this category", @category, method: :delete %>
-  <%= link_to 'Add expense', new_category_expense_path(@category.id) %>
+  <div class="btn-container">
+    <%= link_to 'Add expense', new_category_expense_path(@category.id), class: 'btn btn-block' %>
+  </div>
 </div>
