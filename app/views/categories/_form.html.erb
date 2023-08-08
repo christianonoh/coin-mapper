@@ -16,10 +16,16 @@
     <%= form.text_field :name %>
   </div>
 
-  <div>
-    <%= form.label :icon, style: "display: block" %>
-    <%= form.text_field :icon %>
+  <%= form.label :icon, style: "display: block" %>
+  <div class="icon-tiles">
+    <% [["Food", "feeding.webp"], ["Travel", "transportation.webp"], ["Housing", "housing.webp"], ["Health", "healthcare.webp"], ["Education", "education.webp"], ["Entertainment", "entertainment.webp"], ["Clothing", "clothing.webp"], ["Saving", "savings.webp"], ["Other", "miscellaneous.webp"]].each do |icon_data| %>
+      <%= label_tag do %>
+        <%= radio_button_tag "category[icon]", icon_data[1], false, id: icon_data[1] %>
+        <%= image_tag(image_path(icon_data[1]), alt: icon_data[0], style: "max-width: 50px; max-height: 50px;") %>
+      <% end %>
+    <% end %>
   </div>
+
 
   <div>
     <%= form.submit %>
