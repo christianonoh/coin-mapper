@@ -30,6 +30,7 @@ class ExpensesController < ApplicationController
 
     respond_to do |format|
       if @expense.save
+        @expense_category = ExpenseCategory.create(category_id: params[:category_id], expense_id: @expense.id)
         format.html { redirect_to category_path(params[:category_id]), notice: "Expense was successfully created." }
         format.json { render :show, status: :created, location: @expense }
       else
