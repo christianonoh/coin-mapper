@@ -12,6 +12,11 @@ class ExpensesController < ApplicationController
 
   # GET /expenses/new
   def new
+    @category = Category.find(params[:category_id])
+
+    if @category.author_id != current_user.id
+      redirect_to categories_path, notice: 'You are not allowed to create expenses in this category'
+    end
     @expense = Expense.new
   end
 
@@ -21,11 +26,11 @@ class ExpensesController < ApplicationController
 
   # POST /expenses or /expenses.json
   def create
-    @expense = Expense.new(expense_params)
+    @expense = Expense.new(author_id: current_user.id, **expense_params)
 
     respond_to do |format|
       if @expense.save
-        format.html { redirect_to expense_url(@expense), notice: "Expense was successfully created." }
+        format.html { redirect_to category_path(params[:category_id]), notice: "Expense was successfully created." }
         format.json { render :show, status: :created, location: @expense }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -65,6 +70,6 @@ class ExpensesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def expense_params
-      params.require(:expense).permit(:name, :amount, :author_id)
+      params.require(:expense).permit(:name, :amount)
     end
 end
