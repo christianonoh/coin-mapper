@@ -1,8 +1,11 @@
 <section class='splash-screen-section'>
-    <h1 class='title'>COINMAPPER</h1>
+  <div class="logo-home">
     <%= image_tag("logo.png") %>
-    <div class='buttons'>
-      <%= link_to "Login", new_user_session_path, class: 'btn login-btn' %>
-      <%= link_to "Register", new_user_registration_path, class: 'btn' %>
-    </div>
+  </div>
+  <div class='btn-container'>
+    <%= link_to "Login", new_user_session_path, class: 'btn  btn-block' %>
+  </div>
+  <div class="btn-container2">
+    <%= link_to "Register", new_user_registration_path, class: 'btn btn-block' %>
+  </div>
 </section>

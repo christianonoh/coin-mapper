@@ -2,23 +2,23 @@
 <% content_for :title, @category.name %>
 <% content_for :back_link, link_to('<i class="fa-solid fa-circle-chevron-left"></i>'.html_safe, categories_path) %>
 
+<section class="category-show-section">
+  <%= render @category %>
+  <span class="category-btns">
+  <a href="<%= edit_category_path(@category) %>">
+    <i class="fa-solid fa-pen-to-square" style="color: #3778c2;"></i>
+  </a>
 
-<%= render @category %>
-<span class="category-btns">
-<a href="<%= edit_category_path(@category) %>">
-  <i class="fa-solid fa-pen-to-square" style="color: #3778c2;"></i>
-</a>
-
-  <%= button_to @category, method: :delete, data: { turbo_confirm: "Delete #{@category.name} category?" } do %>
-    <i class="fa-solid fa-trash" style="color: #ec2727;"></i>
+    <%= button_to @category, method: :delete, data: { turbo_confirm: "Delete #{@category.name} category?" } do %>
+      <i class="fa-solid fa-trash" style="color: #ec2727;"></i>
+    <% end %>
+  </span>
+  <% @expenses.each do |expense| %>
+    <%= render expense %>
   <% end %>
-</span>
-<% @expenses.each do |expense| %>
-  <%= render expense %>
-<% end %>
-  <%= link_to "Back to categories", categories_path %>
 
-  <div class="btn-container">
-    <%= link_to 'Add expense', new_category_expense_path(@category.id), class: 'btn btn-block' %>
+    <div class="btn-container">
+      <%= link_to 'Add expense', new_category_expense_path(@category.id), class: 'btn btn-block' %>
+    </div>
   </div>
-</div>
+</section>

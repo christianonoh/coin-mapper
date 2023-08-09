@@ -1,9 +1,7 @@
-<h1>New expense</h1>
+<% content_for :title, "New expense" %>
+<% content_for :back_link, link_to('<i class="fa-solid fa-circle-chevron-left"></i>'.html_safe, category_path(@category)) %>
 
-<%= render "form", expense: @expense %>
+<section class="reg-container">
+  <%= render "form", expense: @expense %>
 
-<br>
-
-<div>
-  <%= link_to "Back to expenses", category_path(@category) %>
-</div>
+</section>
