@@ -5,7 +5,7 @@ RSpec.describe 'categories/show.html.erb', type: :view do
     @user = User.create(name: 'burger', email: 'burger@gmail.com', password: '123456')
     @category = Category.create(name: 'Transportation', author_id: @user.id, icon: 'transportation.webp')
     @expense = Expense.create(author_id: @user.id, name: 'Bike', amount: 100)
-    
+
     assign(:category, @category)
     assign(:expenses, [@expense])
 

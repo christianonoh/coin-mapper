@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Expense, type: :model do
   before(:each) do
     @user = User.create(name: 'Burger')
-    @expense = Expense.new(name: 'Igbo', amount: 10000, author_id: @user.id)
+    @expense = Expense.new(name: 'Igbo', amount: 10_000, author_id: @user.id)
   end
 
   describe 'initialization' do
@@ -12,7 +12,7 @@ RSpec.describe Expense, type: :model do
     end
 
     it 'should have attributes' do
-      expect(@expense).to have_attributes(name: 'Igbo', amount: 10000, author_id: @user.id)
+      expect(@expense).to have_attributes(name: 'Igbo', amount: 10_000, author_id: @user.id)
     end
   end
 
