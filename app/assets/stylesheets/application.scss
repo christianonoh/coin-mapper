@@ -23,6 +23,17 @@ body {
   background-color: #f7f7f7;
 }
 
+.icon-btn {
+  font-size: 1.5rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+
+  svg {
+    color: $white;
+  }
+}
+
 nav,
 .form-header {
   background-color: $primary-color;
@@ -40,8 +51,10 @@ nav,
     font-weight: bold;
     color: $white;
   }
+
   .back-icon {
     font-size: 1.5rem;
+
     svg {
       color: $white;
     }
@@ -55,7 +68,6 @@ nav,
     outline: none;
     font-weight: bold;
     height: unset;
-
   }
 }
 
@@ -90,31 +102,20 @@ nav,
 }
 
 .btn-container {
-    position: fixed;
-    width: 100%;
-    padding: 10px;
-    bottom: 0;
-    background-color: $secondary-color;
-  }
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+  bottom: 0;
+  background-color: $secondary-color;
+}
 
 .btn-container2 {
-    position: fixed;
-    width: 100%;
-    padding: 10px;
-    bottom: 81px;
-    background-color: $primary-color;
-  }
-
-
-  .icon-btn {
-    font-size: 1.5rem;
-    background-color: transparent;
-    outline: none;
-    border: none;
-    svg {
-      color: $white;
-    }
-  }
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+  bottom: 81px;
+  background-color: $primary-color;
+}
 
 .logo-home {
   display: block;
@@ -122,7 +123,7 @@ nav,
   margin: 0 auto;
   margin-top: 10vh;
 
-  img  {
+  img {
     width: 100%;
   }
 }
@@ -173,7 +174,7 @@ nav,
     flex-basis: 60px;
     margin-right: calc(5px + 2vw);
   }
-  
+
   .category-group {
     display: flex;
     flex-basis: 100%;
@@ -189,18 +190,19 @@ nav,
         font-size: 1.2rem;
         font-weight: bold;
       }
+
       .category-date {
         font-size: 0.8rem;
         color: $text-color3;
       }
     }
+
     .category-total-spent {
       font-size: 1rem;
       font-weight: bold;
     }
   }
 }
-
 
 // CATEGORY FORM MODAL
 .icon-tiles {
@@ -215,9 +217,10 @@ nav,
     justify-content: center;
     padding: 10px 0;
     margin: 10px 0;
+
     img {
       width: 100%;
-      height: fit-content;
+      height: 100%;
     }
 
     input[type="radio"] {
