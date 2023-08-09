@@ -1,4 +1,8 @@
 <%= stylesheet_link_tag "category_show" %>
+<% content_for :title, @category.name %>
+<% content_for :back_link, link_to('<i class="fa-solid fa-circle-chevron-left"></i>'.html_safe, categories_path) %>
+
+
 <%= render @category %>
 <span class="category-btns">
 <a href="<%= edit_category_path(@category) %>">

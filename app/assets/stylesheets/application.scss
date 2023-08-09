@@ -23,6 +23,56 @@ body {
   background-color: #f7f7f7;
 }
 
+nav,
+.form-header {
+  background-color: $primary-color;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+
+  .page-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $white;
+  }
+  .back-icon {
+    font-size: 1.5rem;
+    svg {
+      color: $white;
+    }
+  }
+
+  #next-btn {
+    width: unset;
+    background-color: transparent;
+    color: $white;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    height: unset;
+
+  }
+
+
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    font-size: 1rem;
+    color: $white;
+
+    .nav-link {
+      padding: 0 10px;
+    }
+  }
+}
+
 // BUTTON
 .btn {
   display: inline-block;
@@ -61,12 +111,20 @@ body {
     background-color: $secondary-color;
   }
 
-.reg-container {
-  // .btn-bottom {
-  //   position: fixed;
-  //   bottom: 0;
-  // }
+  .icon-btn {
+    font-size: 1.5rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    svg {
+      color: $white;
+    }
+  }
 
+.reg-container {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 100px;
 }
 
 .form-control {
