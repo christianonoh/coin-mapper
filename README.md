@@ -81,7 +81,7 @@ CoinMapper is a user-friendly and intuitive budget management application built 
 
 ## 🚀 Live Demo & Video presentation<a name="live-demo"></a>
 
-- Check out the live demo of Coin Mapper: [CoinMapper Demo](https://theweather360.onrender.com/)
+- Check out the live demo of Coin Mapper: [CoinMapper Demo](https://coinmapper.onrender.com/)
 
 - To get a visual overview of Coin Mapper and its features, watch our video presentation: [CoinMapper Video Presentation](https://www.loom.com/share/40eae9e00ab047baa81124a3f50965f5?sid=7e9a48fe-e4a1-4676-8327-64ff6f57c564)
 
