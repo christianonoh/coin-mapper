@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="./src/assets/logo.png" alt="logo" width="280"  height="auto" />
+  <img src="./app/assets/images/logo.png" alt="logo" width="280"  height="auto" />
   <br/>
 
   <!-- <h3><b>Book Town</b></h3> -->
@@ -81,9 +81,9 @@ CoinMapper is a user-friendly and intuitive budget management application built 
 
 ## 🚀 Live Demo & Video presentation<a name="live-demo"></a>
 
-- Check out the live demo of Coin Mapper: [Weather360 Demo](https://theweather360.onrender.com/)
+- Check out the live demo of Coin Mapper: [CoinMapper Demo](https://theweather360.onrender.com/)
 
-- To get a visual overview of Coin Mapper and its features, watch our video presentation: [Weather360 Video Presentation](https://www.loom.com/share/d9931e4bfc7b46f5a08a69dab1bf04da)
+- To get a visual overview of Coin Mapper and its features, watch our video presentation: [CoinMapper Video Presentation](https://www.loom.com/share/d9931e4bfc7b46f5a08a69dab1bf04da)
 
 In the video, we provide a walkthrough of the application, demonstrating how to create Categories and Expenses, modify them as you see fit and navigate the responsive design on different devices.
 
