@@ -111,12 +111,38 @@ nav,
 
 .category-btns { display: none; }
 
+// NOTIFICATIONS
+
+/* Styles for the outer notification container */
+.notification {
+  text-align: center;
+  border: 1px solid #ccc;
+  margin-top: 60px;
+  margin-bottom: -70px;
+}
+
+/* Styles for the notice message */
+.notice {
+  padding: 10px;
+  background-color: #dff0d8;
+  border: 1px solid #d0e9c6;
+  color: #3c763d;
+}
+
+/* Styles for the alert message */
+.alert {
+  padding: 10px;
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  color: #a94442;
+}
+
 .logo-home {
   display: block;
   width: 90%;
   margin: 0 auto;
   margin-top: 10vh;
-  max-width: 500px;
+  max-width: 450px;
 
   img {
     width: 100%;

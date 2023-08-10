@@ -32,13 +32,17 @@
 <% end %>
 
     <main>
-      <% if notice.present? %>
-        <p class="notice"><%= notice %></p>
-      <% end %>
+    <% if notice.present? || alert.present? %>
+      <div class="notification">
+        <% if notice.present? %>
+          <p class="notice"><%= notice %></p>
+        <% end %>
 
-      <% if alert.present? %>
-        <p class="alert"><%= alert %></p>
-      <% end %>
+        <% if alert.present? %>
+          <p class="alert"><%= alert %></p>
+        <% end %>
+      </div>
+    <% end %>
       <%= yield %>
     </main>
   </body>
