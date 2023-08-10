@@ -133,7 +133,7 @@ Open your web browser and go to `http://localhost:3000` to access CoinMapper.
 
 CoinMapper uses RSpec for testing. To run the tests, follow these steps:
 
-- **Navigate to Project Directory:** Make sure you are in the project directory (`coinmapper`).
+- **Navigate to Project Directory:** Make sure you are in the project directory (`coin-mapper`).
 
 - **Run Tests:** Use the following command to run the tests.
 ```sh
