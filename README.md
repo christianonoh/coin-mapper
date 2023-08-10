@@ -83,7 +83,7 @@ CoinMapper is a user-friendly and intuitive budget management application built 
 
 - Check out the live demo of Coin Mapper: [CoinMapper Demo](https://theweather360.onrender.com/)
 
-- To get a visual overview of Coin Mapper and its features, watch our video presentation: [CoinMapper Video Presentation](https://www.loom.com/share/d9931e4bfc7b46f5a08a69dab1bf04da)
+- To get a visual overview of Coin Mapper and its features, watch our video presentation: [CoinMapper Video Presentation](https://www.loom.com/share/40eae9e00ab047baa81124a3f50965f5?sid=7e9a48fe-e4a1-4676-8327-64ff6f57c564)
 
 In the video, we provide a walkthrough of the application, demonstrating how to create Categories and Expenses, modify them as you see fit and navigate the responsive design on different devices.
 
@@ -103,7 +103,7 @@ Ensure you have Ruby installed on your system. You can check by running the code
 ```
 ### Setup
 
-Clone or download the Beyond Borders repository to your local machine.
+Clone or download the Coin Mapper repository to your local machine.
 ```sh
   git clone https://github.com/christianonoh/coin-mapper.git
 ```
