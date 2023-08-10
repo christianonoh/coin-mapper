@@ -4,17 +4,14 @@
 
 <section class="category-show-section">
   <%= render @category %>
-  <span class="category-btns">
-  <a href="<%= edit_category_path(@category) %>">
-    <i class="fa-solid fa-pen-to-square" style="color: #3778c2;"></i>
-  </a>
-
-    <%= button_to @category, method: :delete, data: { turbo_confirm: "Delete #{@category.name} category?" } do %>
-      <i class="fa-solid fa-trash" style="color: #ec2727;"></i>
-    <% end %>
-  </span>
+  <% if @expenses.any? %>
   <% @expenses.each do |expense| %>
     <%= render expense %>
+  <% end %>
+  <% else %>
+    <div class="no-expenses">
+      <p>No expenses yet</p>
+    </div>
   <% end %>
 
     <div class="btn-container">

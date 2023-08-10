@@ -15,7 +15,7 @@
     <%= form.text_field :name, placeholder: 'Enter name of category..' %>
   </div>
 
-  <%= form.label :icon, "Select an icon", style: "display: block" %>
+  <%= form.label :icon, "Select an icon", style: "display: block; font-weight: bold; text-align: center;" %>
   <div class="icon-tiles">
     <% [["Food", "feeding.webp"], ["Travel", "transportation.webp"], ["Housing", "housing.webp"], ["Health", "healthcare.webp"], ["Education", "education.webp"], ["Entertainment", "entertainment.webp"], ["Clothing", "clothing.webp"], ["Saving", "savings.webp"], ["Other", "miscellaneous.webp"]].each do |icon_data| %>
       <%= label_tag do %>

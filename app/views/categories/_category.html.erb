@@ -8,5 +8,16 @@
     </div>
     <p class="category-total-spent"><%= number_to_currency(category.expenses.sum(:amount)) %></p>
   </div>
+  <% unless current_page?(root_path) || current_page?(categories_path) %>
+  <span class="category-btns">
+    <a href="<%= edit_category_path(category) %>">
+      <i class="fa-solid fa-pen-to-square" style="color: #3778c2;"></i>
+    </a>
+
+    <%= button_to category, method: :delete, data: { turbo_confirm: "Delete #{category.name} category?" } do %>
+      <i class="fa-solid fa-trash" style="color: #ec2727;"></i>
+    <% end %>
+  </span>
+<% end %>
 
 </div>

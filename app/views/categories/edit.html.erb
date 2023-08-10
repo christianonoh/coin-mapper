@@ -1,14 +1,10 @@
-<% content_for :title, "Edit #{@category.name}" %>
+<% content_for :title, "#{@category.name}" %>
 
 <% content_for :back_link, link_to('<i class="fa-solid fa-circle-chevron-left"></i>'.html_safe, @category) %>
 
-<h1>Editing category</h1>
-
-<%= render "form", category: @category %>
-
-<br>
-
-<div>
-  <%= link_to "Show this category", @category %> |
-  <%= link_to "Back to categories", categories_path %>
+<div class="reg-container">
+  <h2>Edit <% @category.name %></h2>
+  <%= render "form", category: @category %>
 </div>
+
+

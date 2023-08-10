@@ -109,19 +109,14 @@ nav,
   background-color: $secondary-color;
 }
 
-.btn-container2 {
-  position: fixed;
-  width: 100%;
-  padding: 10px;
-  bottom: 81px;
-  background-color: $primary-color;
-}
+.category-btns { display: none; }
 
 .logo-home {
   display: block;
   width: 90%;
   margin: 0 auto;
   margin-top: 10vh;
+  max-width: 500px;
 
   img {
     width: 100%;
@@ -132,11 +127,23 @@ nav,
 .expenses-section,
 .category-show-section {
   margin-top: 70px;
+  margin-bottom: 90px;
+}
+
+.no-categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.5rem;
+  color: $text-color2;
+  margin-top: 40vh;
 }
 
 .reg-container {
   margin: 0 auto;
   margin-top: 100px;
+  h2 { text-align: center; }
 }
 
 .form-control {
@@ -236,9 +243,30 @@ nav,
     max-width: 500px;
     margin: 20vh auto 0 auto;
     overflow: auto;
-    min-height: 300px;
+    min-height: 200px;
     padding: 30px;
     border-radius: 5px;
     box-shadow: 0 4px 14px 0 rgba(70, 70, 70, 0.38);
+  }
+
+  .form-control input:not([type="submit"]) {
+    border: 1px solid $text-color1;
+  }
+
+  .btn-container {
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    bottom: 0;
+    left: 0;
+    background-color: $secondary-color;
+  }
+
+  .categories-section,
+  .expenses-section,
+  .category-show-section {
+    margin: 70px auto 90px auto;
+    width: 80%;
+    max-width: 1000px;
   }
 }

@@ -51,7 +51,7 @@ $white: #fff;
   margin-top: 10px;
   position: absolute;
   right: 20px;
-  top: 120px;
+  top: 55px;
 
   button,
   a {
@@ -62,6 +62,16 @@ $white: #fff;
     padding: 5px 0 5px 15px;
     cursor: pointer;
   }
+}
+
+.no-expenses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.5rem;
+  color: $text-color2;
+  margin-top: 30vh;
 }
 
 .expense-card {
