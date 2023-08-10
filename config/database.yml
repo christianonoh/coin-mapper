@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: coin_mapper_production
-  username: coin_mapper
-  password: <%= ENV["COIN_MAPPER_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
